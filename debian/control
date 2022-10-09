@@ -1,0 +1,35 @@
+Source: kcron
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+           Sune Vuorela <sune@debian.org>,
+Build-Depends: cmake (>= 3.16.0~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.83.0~),
+               gettext,
+               libkf5configwidgets-dev (>= 5.58.0~),
+               libkf5doctools-dev (>= 5.58.0~),
+               libkf5i18n-dev (>= 5.58.0~),
+               libkf5iconthemes-dev (>= 5.58.0~),
+               libkf5kio-dev (>= 5.58.0~),
+               libkf5xmlgui-dev (>= 5.58.0~),
+               pkg-kde-tools,
+               qtbase5-dev (>= 5.15.0~),
+Standards-Version: 4.5.1
+Homepage: https://kde.org/applications/utilities/org.kde.kcron
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kcron
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kcron.git
+Rules-Requires-Root: no
+
+Package: kde-config-cron
+Section: admin
+Architecture: any
+Depends: cron | cron-daemon | anacron, ${misc:Depends}, ${shlibs:Depends}
+Suggests: khelpcenter
+Description: program scheduler frontend
+ kde-config-cron is a KDE configuration module for scheduling programs to run
+ at specific intervals using cron, the UNIX scheduling service.
+ .
+ This package is part of the KDE administration module.
